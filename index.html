@@ -1,0 +1,394 @@
+<!-- <h1>Hello World</h1> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOFLO</title>
+
+  <script src="https://kit.fontawesome.com/bf674b0a87.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    />
+    <!-- Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- CSS -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /*outline: 1px dashed crimson;*/
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      padding: 10px;
+      background-color: lightpink;
+      z-index: 1;
+      padding: 1px;
+      color: indianred;
+      box-shadow: 1px 1px 5px rgba(230, 217, 109, 0.2);
+    }
+
+    header div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    header div span {
+      animation: fade-in 1s forwards;
+    }
+
+    header nav {
+      display: none;
+      animation: fade-in 2s forwards;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    header nav ul li {
+      list-style: none;
+    }
+
+    header nav ul li a {
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      color: crimson;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    header nav ul li a :hover {
+      color: red;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center;
+      background-size: cover;
+      padding: 1px;
+    }
+
+    .banner-text {
+      /*background-color: rgba(0, 0, 0, 0.1);*/
+      /*backdrop-filter: blur(2px);*/
+    }
+
+    .banner-text h1 {
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      border: 5px solid white;
+      margin: 10px;
+      padding: 10px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .banner-text p {
+      text-align: left;
+      font-weight: bold;
+      color: #fff;
+      margin: 20px;
+    }
+
+    .btn {
+        display: block;
+        background-color: lightpink;
+        color: #fff;
+        margin: 10px;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 30px;
+        box-shadow: crimson;
+      }
+
+      .btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+    .banner-text a {
+      display: block;
+      background-color: rgb(255, 255, 239);
+      color: rgb(253, 105, 105);
+      border: 3px solid rgb(250, 165, 178);
+      margin: 10px;
+      border-radius: 5px;
+      padding: 5px 0;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .card {
+      margin: 20px;
+      border: 3px solid pink;
+      padding: 20px;
+      border-radius: 25px;
+      box-sizing: 1px 1px 5px rgba (0, 0, 0, 0.2);
+    }
+
+    .card img  {
+      width: 100%;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .card p {
+        padding: 10px 0;
+        text-align: center;
+      }
+      
+    /* .card a {
+      display: block;
+      background-color: #fff;
+      color: crimson;
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 5px 0;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+    } */
+
+    #contact div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+      }
+
+    #contact {
+      /*height: 25vh;*/
+    }
+
+    #contact div {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 20px;
+    }
+
+    #contact div i {
+      font-size: 30px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      margin: 10px;
+    }
+    @media (min-width:768px) {
+      #topics {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabecera -->
+  <header>
+    <div>
+      <h2>Logo</h2>
+      <span class="material-symbols-outlined" id="open">menu</span>
+      <span class="material-symbols-outlined" id="close">close</span>
+    </div>
+    <nav class="animate_animated">
+      <ul>
+        <li><a href="#about">Acerca de </a></li>
+        <li><a href="#topics">Temas</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main -->
+  <main>
+    <section class="banner" id="about">
+      <div class="banner-text">
+        <h1>Floflo</h1>
+        <img src="tomatoe.webp" alt="">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam sed
+          dolorem sapiente commodi. Placeat iste blanditiis veniam error
+          perspiciatis! Eveniet harum consectetur delectus quibusdam nesciunt
+          voluptatum, quo molestias quas tenetur?
+        </p>
+        <a href="#topics">Obtener Productos</a>
+        <a class="btn" href="#topics">Obtener Productos</a>
+      </div>
+    </section>
+    <section id="topics">
+      <div class="card">
+        <img src="descarga (17)2.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+          accusamus aperiam, aspernatur distinctio doloremque eius eligendi
+          eos exercitationem facere facilis illum iste magni minus modi nisi
+          porro rerum veniam?
+        </p>
+        <a class="btn">Más información</a>
+      </div>
+      <div class="card">
+        <img src="descarga (20)ññ.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+          accusamus aperiam, aspernatur distinctio doloremque eius eligendi
+          eos exercitationem facere facilis illum iste magni minus modi nisi
+          porro rerum veniam?
+        </p>
+        <a class="btn" href="">Más información</a>
+      </div>
+      <div class="card">
+        <img src="png.png" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+          accusamus aperiam, aspernatur distinctio doloremque eius eligendi
+          eos exercitationem facere facilis illum iste magni minus modi nisi
+          porro rerum veniam?
+        </p>
+        <a class="btn">Más información</a>
+      </div>
+      <div class="card">
+        <img
+          src="Instagram photo by Joana Rosa Bragança • Feb 10, 2016 at 8_06pm UTC _ Fox illustration, Animal illustration, Illustration.jpg"
+          alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+          accusamus aperiam, aspernatur distinctio doloremque eius eligendi
+          eos exercitationem facere facilis illum iste magni minus modi nisi
+          porro rerum veniam?
+        </p>
+        <a class="btn">Más información</a>
+      </div>
+      <div class="card">
+        <img src="fruits.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+          accusamus aperiam, aspernatur distinctio doloremque eius eligendi
+          eos exercitationem facere facilis illum iste magni minus modi nisi
+          porro rerum veniam?
+        </p>
+        <a class="btn">Más información</a>
+      </div>
+      <div class="card">
+        <img src="fb37e2d9-bdee-405d-a04b-21e8e9e7a59e.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+          accusamus aperiam, aspernatur distinctio doloremque eius eligendi
+          eos exercitationem facere facilis illum iste magni minus modi nisi
+          porro rerum veniam?
+        </p>
+        <a class="btn">Más información</a>
+      </div>
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer id="contact">
+    <div>
+      <a href="">
+        <i class="fa-brands fa-square-facebook"></i>
+      </a>
+      <a href="">
+        <i class="fa-brands fa-square-instagram"></i>
+      </a>
+      <a href="">
+        <i class="fa-brands fa-square-twitter"></i>
+      </a>
+      <a href="">
+        <i class="fa-brands fa-square-youtube"></i>
+      </a> 
+    </div>
+    <p>Ⓒ 2022. Floflo Company. Reservados todos los derechos</p> 
+  </footer>
+</body>
+<script>
+    document
+      .querySelector('.card')
+      .classList.add('animate__animated', 'animate__pulse');
+    document
+      .querySelector('header div span')
+      .classList.add('animate__animated', 'animate__fadeInLeft');
+  document.getElementById('close').style.display = 'none';
+  document.getElementById('open').addEventListener('click', function (evt) {
+    evt.target.style.display = 'none';
+    document.getElementById('close').style.display = 'initial';
+    document.querySelector('nav').style.display = 'initial';
+    document.querySelector('nav').classList.add('animate__bounceInDown');
+  });
+
+  document.getElementById('close').addEventListener('click', function (evt) {
+    evt.target.style.display = 'none';
+    document.getElementById('open').style.display = 'initial';
+    document.querySelector('nav').style.display = 'none';
+  });
+  document
+      .getElementById('btn_about')
+      .addEventListener('click', function (evt) {
+        evt.preventDefault();
+        // document.querySelector('section#about').scrollIntoView({
+        //   top: 200,
+        //   behavior: 'smooth',
+        // });
+        window.scrollTo(0, 0);
+      });
+    document
+      .getElementById('btn_products')
+      .addEventListener('click', function (evt) {
+        evt.preventDefault();
+        // document.querySelector('section#products').scrollIntoView({
+        //   behavior: 'smooth',
+        // });
+        window.scrollTo(0, 405);
+      });
+    document
+      .getElementById('btn_contact')
+      .addEventListener('click', function (evt) {
+        evt.preventDefault();
+        document.querySelector('footer#contact').scrollIntoView({
+          behavior: 'smooth',
+        });
+      });
+</script>
+</html>
