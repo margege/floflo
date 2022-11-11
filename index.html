@@ -46,7 +46,10 @@
       position: sticky;
       top: 0;
       padding: 10px;
-      background-color: lightpink;
+      background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       z-index: 1;
       padding: 1px;
       color: indianred;
@@ -97,7 +100,7 @@
     }
 
     .banner {
-      background: url('banner.jpg') no-repeat center;
+      /* background: url('tomatoe.webp') no-repeat center; */
       background-size: cover;
       padding: 1px;
     }
@@ -109,10 +112,10 @@
 
     .banner-text h1 {
       font-weight: bold;
-      color: #fff;
+      color:#faaca8 ;
       text-align: center;
       text-transform: uppercase;
-      border: 5px solid white;
+      border: 5px solid #faaca8;
       margin: 10px;
       padding: 10px 0;
       backdrop-filter: blur(10px);
@@ -121,7 +124,7 @@
     .banner-text p {
       text-align: left;
       font-weight: bold;
-      color: #fff;
+      color: #faaca8;
       margin: 20px;
     }
 
@@ -220,6 +223,9 @@
       margin: 10px;
     }
     @media (min-width:768px) {
+      .banner {
+        height: 70vh;
+      }
       #topics {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -248,7 +254,7 @@
     <section class="banner" id="about">
       <div class="banner-text">
         <h1>Floflo</h1>
-        <img src="tomatoe.webp" alt="">
+        <!-- <img src="tomatoe.webp" alt=""> -->
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam sed
           dolorem sapiente commodi. Placeat iste blanditiis veniam error
@@ -256,7 +262,7 @@
           voluptatum, quo molestias quas tenetur?
         </p>
         <a href="#topics">Obtener Productos</a>
-        <a class="btn" href="#topics">Obtener Productos</a>
+    
       </div>
     </section>
     <section id="topics">
